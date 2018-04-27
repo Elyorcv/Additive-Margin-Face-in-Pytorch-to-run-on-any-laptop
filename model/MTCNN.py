@@ -55,6 +55,7 @@ class MTCNN():
         min_length *= m
 
         factor_count = 0
+        torch.set_grad_enabled(False)
         while min_length > min_detection_size:
             scales.append(m*factor**factor_count)
             min_length *= factor
@@ -89,7 +90,7 @@ class MTCNN():
         # STAGE 2
 
         img_boxes = get_image_boxes(bounding_boxes, image, size=24)
-        img_boxes = Variable(torch.FloatTensor(img_boxes), volatile=True)
+        img_boxes = Variable(torch.FloatTensor(img_boxes))
         output = self.rnet(img_boxes)
         offsets = output[0].data.numpy()  # shape [n_boxes, 4]
         probs = output[1].data.numpy()  # shape [n_boxes, 2]
@@ -110,7 +111,7 @@ class MTCNN():
         img_boxes = get_image_boxes(bounding_boxes, image, size=48)
         if len(img_boxes) == 0: 
             return []
-        img_boxes = Variable(torch.FloatTensor(img_boxes), volatile=True)
+        img_boxes = Variable(torch.FloatTensor(img_boxes))
         output = self.onet(img_boxes)
         offsets = output[1].data.numpy()  # shape [n_boxes, 4]
         probs = output[2].data.numpy()  # shape [n_boxes, 2]
