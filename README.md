@@ -7,7 +7,7 @@ There are several works I have done for this:
     * the [original model is in tensorflow], now ported to pytorch.
     * got a 97% accuracy on lfw dataset without alignment
     * also update the [MTCNN pytorch] version a little bit, make it end to end pytorch
-    * This project is based on pytorch0.3, haven't been tested on pytorch0.4 yet    
+    * This project is based on pytorch0.3, but compatible with new pytorch0.4    
 
 
 - Multiprocess in python to realize parallel processing of image capture and face detection
@@ -27,7 +27,6 @@ There are several works I have done for this:
     ```
 
 * 2 download the [weights] to model folder
-[weights]:https://pan.baidu.com/s/1PwHjtGLAmAoG5LJkQk5LSQ
 
 * 3 to take a picture, run
     ```
@@ -50,3 +49,4 @@ There are several works I have done for this:
     ```
 
 For training, please refer to msceleb_cosface_train.ipynb
+[weights]:https://pan.baidu.com/s/1PwHjtGLAmAoG5LJkQk5LSQ
