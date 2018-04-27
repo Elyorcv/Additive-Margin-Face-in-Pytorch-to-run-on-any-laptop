@@ -27,6 +27,7 @@ There are several works I have done for this:
     ```
 
 * 2 download the [weights] to model folder
+[weights]:https://pan.baidu.com/s/1PwHjtGLAmAoG5LJkQk5LSQ
 
 * 3 to take a picture, run
     ```
@@ -49,4 +50,3 @@ There are several works I have done for this:
     ```
 
 For training, please refer to msceleb_cosface_train.ipynb
-[weights]:https://pan.baidu.com/s/1PwHjtGLAmAoG5LJkQk5LSQ
